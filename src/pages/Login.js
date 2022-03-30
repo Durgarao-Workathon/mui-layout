@@ -7,6 +7,7 @@ import Lottie from "react-lottie";
 import welcome from "../lotties/welcome";
 import pw from "../lotties/pw";
 import typing from "../lotties/typing";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [username, setUsername] = React.useState("");
@@ -100,6 +101,16 @@ export default function Login() {
               >
                 Login
               </LoadingButton>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Link to="/register">Create New?</Link>
+              <Link to="/forgotpassword">Forgto password?</Link>
             </Box>
           </form>
         </Paper>
